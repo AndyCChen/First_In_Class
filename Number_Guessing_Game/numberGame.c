@@ -15,8 +15,8 @@
 
 int main()
 {
-   const int MAX_VALUE = 10;
-   int choice, answer, newMaxValue = MAX_VALUE;
+   const int MAX_VALUE = 100;
+   int choice, answer, newMaxValue = 10;
 
    time_t t;
    srand((unsigned) time(&t)); 
@@ -42,7 +42,7 @@ int main()
                do
                {
                      printf("Enter a number between 1 - %d: ", newMaxValue);
-                     fgets(userAnswer, 3, stdin);
+                     fgets(userAnswer, 4, stdin);
                      fflush(stdin);
                      
                      if (userAnswer[0] == 'q' || userAnswer[0] == 'Q')
@@ -75,7 +75,7 @@ int main()
                int flag = 0;
                do
                {
-                  printf("Enter a new max value: ");
+                  printf("Enter a new max value below %d: ", MAX_VALUE);
                   scanf("%d", &newMaxValue);
 
                   if (newMaxValue <= 0)
