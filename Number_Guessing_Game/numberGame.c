@@ -15,7 +15,7 @@
 
 int main()
 {
-   const int MAX_VALUE = 100;
+   const int MAX_VALUE = RAND_MAX;
    int choice, answer, newMaxValue = 10;
 
    time_t t;
