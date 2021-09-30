@@ -16,7 +16,7 @@
 int main()
 {
    FILE *fp;
-   const int MAX_VALUE = 100;
+   const int MAX_VALUE = RAND_MAX;
    int choice, answer, newMaxValue = 10;
 
    time_t t;
@@ -85,7 +85,7 @@ int main()
                {
                   fp = fopen("MAX_NUMBER.txt", "w");
 
-                  printf("Enter a new max value: ");
+                  printf("Enter a new max value below %d: ", MAX_VALUE);
                   scanf("%d", &newMaxValue);
 
                   if (newMaxValue <= 0)
