@@ -36,13 +36,13 @@ int main()
          {
             case 1:
             {
-               char userAnswer[3];
+               char userAnswer[6];
                answer = rand() % newMaxValue + 1;
                long int userNum;
                do
                {
                      printf("Enter a number between 1 - %d: ", newMaxValue);
-                     fgets(userAnswer, 4, stdin);
+                     fgets(userAnswer, 6, stdin);
                      fflush(stdin);
                      
                      if (userAnswer[0] == 'q' || userAnswer[0] == 'Q')
@@ -105,6 +105,7 @@ int main()
             }
       }
    } while(choice != 3);
+  
    
 
    return 0;
