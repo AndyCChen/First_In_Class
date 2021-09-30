@@ -1,15 +1,4 @@
-// Program 1: Restautrant Bill
-
-/*
-   - ask user inputs for tax and tip as percent
-   - random number generator to choose which four meals to use
-   - Total = mealPrice + tax + tip
-   - output the meal cost, tax, tip, and total bill
-
-**/
-
-
-  // Program 2: Number Guessing Game
+// Program 2: Number Guessing Game
 
 /* 
    - create switch statement for menu selection
@@ -19,3 +8,12 @@
      that is not greater than the max value
    - option three exits the game
 **/   
+
+#include <stdio.h>
+
+int main()
+{
+  
+
+   return 0;
+}
