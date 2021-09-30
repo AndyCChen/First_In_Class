@@ -15,11 +15,19 @@
 
 int main()
 {
-   const int MAX_VALUE = 10;
-   int choice, answer, newMaxValue = MAX_VALUE;
+   FILE *fp;
+   const int MAX_VALUE = 100;
+   int choice, answer, newMaxValue = 10;
 
    time_t t;
    srand((unsigned) time(&t)); 
+
+   fp = fopen("MAX_NUMBER.txt", "r");
+   if (fp != NULL)
+   {
+      fscanf(fp, "%d", &newMaxValue);
+      fclose(fp);
+   }
 
    do
    {
@@ -75,6 +83,8 @@ int main()
                int flag = 0;
                do
                {
+                  fp = fopen("MAX_NUMBER.txt", "w");
+
                   printf("Enter a new max value: ");
                   scanf("%d", &newMaxValue);
 
@@ -88,6 +98,9 @@ int main()
                   }
                   else
                   {
+                     fprintf(fp, "%d", newMaxValue);
+                     fclose(fp);
+
                      printf("new max value set to %d\n", newMaxValue);
                      flag = 1;
                   }
@@ -106,6 +119,5 @@ int main()
       }
    } while(choice != 3);
    
-
    return 0;
 }
